@@ -7,6 +7,12 @@
     <groupId>org.Eden</groupId>
     <artifactId>Edenblog</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>Eden-framework</module>
+        <module>Eden-admin</module>
+        <module>Eden-blog</module>
+    </modules>
 
     <!--编码方式、jdk版本-->
     <properties>
@@ -18,9 +24,9 @@
 
 
     <!--依赖的版本控制-->
+    <!--版本锁定,兵没有添加依赖-->
     <dependencyManagement>
         <dependencies>
-
             <!-- SpringBoot的依赖配置-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
