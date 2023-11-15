@@ -5,6 +5,7 @@ import org.Eden.domain.entity.Article;
 import org.Eden.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -43,4 +44,13 @@ public class ArticleController {
         return articleService.articleList(pageNum,pageSize,categoryId);
     }
 
+    //------------------------------------查询文章详情------------------------------------
+    @GetMapping("/{id}") //路径参数形式的HTTP请求，注意下面那行只有加@PathVariable注解才能接收路径参数形式的HTTP请求
+    //ResponseResult是huanf-framework工程的domain目录的类
+    public ResponseResult getArticleDetail(@PathVariable("id") Long id) {//注解里指定的id跟上一行保持一致
+
+        //根据id查询文章详情
+        return articleService.getArticleDetail(id);
+
+    }
 }
