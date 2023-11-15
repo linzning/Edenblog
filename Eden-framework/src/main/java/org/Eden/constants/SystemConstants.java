@@ -32,4 +32,9 @@ public class SystemConstants {
      *  分类id为正常的最小值
      */
     public static final int CATEGORY_NORMAL_MIN=0;
+
+    /**
+     * 友链状态为审核通过
+     */
+    public static final String LINK_STATUS_NORMAL = "0";
 }
