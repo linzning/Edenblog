@@ -20,7 +20,6 @@ public class ArticleController {
 
 
     //----------------------------------测试mybatisPlus---------------------------------
-
     @GetMapping("/list")
     //Article是公共模块的实体类
     public List<Article> test(){
@@ -29,13 +28,19 @@ public class ArticleController {
     }
 
     //----------------------------------测试统一响应格式-----------------------------------
-
     @GetMapping("/hotArticleList")
     //ResponseResult是huanf-framework工程的domain目录的类
     public ResponseResult hotArticleList(){
         //查询热门文章，封装成ResponseResult返回
         ResponseResult result = articleService.hotArticleList();
         return result;
+    }
+
+    //----------------------------------分页查询文章的列表---------------------------------
+    @GetMapping("/articleList")
+    //ResponseResult是huanf-framework工程的domain目录的类
+    public ResponseResult articleList(Integer pageNum,Integer pageSize,Long categoryId){
+        return articleService.articleList(pageNum,pageSize,categoryId);
     }
 
 }

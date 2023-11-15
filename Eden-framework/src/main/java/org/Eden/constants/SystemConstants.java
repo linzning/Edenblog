@@ -28,4 +28,8 @@ public class SystemConstants {
      */
     public static final String STATUS_NORMAL = "0";
 
+    /**
+     *  分类id为正常的最小值
+     */
+    public static final int CATEGORY_NORMAL_MIN=0;
 }
