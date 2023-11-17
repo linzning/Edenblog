@@ -4,5 +4,10 @@ import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.User;
 
 public interface BlogLoginService {
+
+    //登录
     ResponseResult login(User user);
+
+    //退出登录
+    ResponseResult logout();
 }
