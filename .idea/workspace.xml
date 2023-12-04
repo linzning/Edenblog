@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="testREADME" />
+    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="testREADME">
+      <change afterPath="$PROJECT_DIR$/.idea/easyCodeTableSetting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-blog/src/main/java/org/Eden/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/vo/CommentVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/mapper/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5f4b968e-e7fa-4549-8939-2cc522ba9c35.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5f4b968e-e7fa-4549-8939-2cc522ba9c35.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/constants/SystemConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/constants/SystemConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/BlogLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/BlogLoginServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,12 +38,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "linzning"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;linzning&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -38,9 +55,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2YFaWpg4mIpnEmeradWmkY8rQGr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -54,7 +71,9 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/learning material/web/sg/SGBlog/SGBlog",
     "node.js.detected.package.eslint": "true",
@@ -64,7 +83,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "com.sjhy.plugin.ui.TemplateSettingForm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -82,6 +101,15 @@
       <option name="presentableId" value="Default" />
       <updated>1700123818155</updated>
       <workItem from="1700123819117" duration="17919000" />
+      <workItem from="1700206107354" duration="2725000" />
+      <workItem from="1700294621391" duration="22000" />
+      <workItem from="1700487533540" duration="204000" />
+      <workItem from="1700645696800" duration="23000" />
+      <workItem from="1701177923187" duration="640000" />
+      <workItem from="1701220001456" duration="2097000" />
+      <workItem from="1701317557963" duration="88000" />
+      <workItem from="1701671662729" duration="12000" />
+      <workItem from="1701705176872" duration="1920000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />

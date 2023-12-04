@@ -19,10 +19,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 
-/**
- * @author 35238
- * @date 2023/7/22 0022 21:39
- */
+
 @Service
 //认证，判断用户登录是否成功
 public class BlogLoginServiceImpl implements BlogLoginService {
@@ -66,7 +63,6 @@ public class BlogLoginServiceImpl implements BlogLoginService {
     //-----------------------------------退出登录------------------------------------------
     @Override
     public ResponseResult logout() {
-
         //获取token，然后解析token值获取其中的userid。SecurityContextHolder是security官方提供的类
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         //LoginUser是我们写的类
