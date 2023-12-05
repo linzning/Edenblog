@@ -8,12 +8,15 @@ import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.Comment;
 import org.Eden.domain.vo.CommentVo;
 import org.Eden.domain.vo.PageVo;
+import org.Eden.enums.AppHttpCodeEnum;
+import org.Eden.exception.SystemException;
 import org.Eden.mapper.CommentMapper;
 import org.Eden.service.CommentService;
 import org.Eden.service.UserService;
 import org.Eden.utils.BeanCopyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.Comparator;
 import java.util.List;
@@ -27,6 +30,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
     private UserService userService;
 
     @Override
+    //查询评论区的评论
     public ResponseResult commentList(Long articleId, Integer pageNum, Integer pageSize) {
 
         LambdaQueryWrapper<Comment> queryWrapper = new LambdaQueryWrapper<>();
@@ -58,6 +62,28 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
         return ResponseResult.okResult(new PageVo(commentVoList,page.getTotal()));
     }
+
+    //在文章的评论区发送评论
+    @Override
+    public ResponseResult addComment(Comment comment) {
+        //注意前端在调用这个发送评论接口时，在请求体是没有向我们传入createTime、createId、updateTime、updateID字段，所以
+        //我们这里往后端插入数据时，就会导致上面那行的四个字段没有值
+        //为了解决这个问题，我们在huanf-framework工程新增了MyMetaObjectHandler类、修改了Comment类。详细可自己定位去看一下代码
+
+        //限制用户在发送评论时，评论内容不能为空。如果为空就抛出异常
+        if(!StringUtils.hasText(comment.getContent())){
+            //AppHttpCodeEnum是我们写的枚举类，CONTENT_NOT_NULL代表提示''
+            throw new SystemException(AppHttpCodeEnum.CONTENT_NOT_NULL);
+        }
+
+        //解决了四个字段没有值的情况，就可以直接调用mybatisplus提供的save方法往数据库插入数据(用户发送的评论的各个字段)了
+        save(comment);
+
+        //封装响应返回
+        return ResponseResult.okResult();
+    }
+
+    //-------------------------------下面是一些方便调用的方法--------------------------------------
 
     //根据根评论的id，来查询对应的所有子评论(注意子评论只查到二级评论，不再往深查)
     private List<CommentVo> getChildren(Long id) {
