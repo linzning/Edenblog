@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="发布友链评论功能">
-      <change afterPath="$PROJECT_DIR$/Eden-blog/src/main/java/org/Eden/controller/UserController.java" afterDir="false" />
+    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="完成个人中心信息展示">
+      <change afterPath="$PROJECT_DIR$/Eden-blog/src/main/java/org/Eden/config/SwaggerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-blog/src/main/java/org/Eden/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-blog/src/main/java/org/Eden/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-blog/src/main/java/org/Eden/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-blog/src/main/java/org/Eden/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-blog/src/main/java/org/Eden/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-blog/src/main/java/org/Eden/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-blog/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-blog/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/enums/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/enums/AppHttpCodeEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
@@ -108,7 +110,7 @@
       <workItem from="1701823544237" duration="1195000" />
       <workItem from="1701826544418" duration="366000" />
       <workItem from="1702426728100" duration="2386000" />
-      <workItem from="1702433476246" duration="619000" />
+      <workItem from="1702433476246" duration="4721000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -150,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701774569042</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="完成个人中心信息展示">
+      <option name="closed" value="true" />
+      <created>1702434361611</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702434361611</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +183,7 @@
     <MESSAGE value="显示评论功能" />
     <MESSAGE value="发布评论功能" />
     <MESSAGE value="发布友链评论功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="发布友链评论功能" />
+    <MESSAGE value="完成个人中心信息展示" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成个人中心信息展示" />
   </component>
 </project>
