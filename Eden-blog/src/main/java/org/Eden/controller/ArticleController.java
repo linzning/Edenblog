@@ -39,7 +39,7 @@ public class ArticleController {
 
     //----------------------------------分页查询文章的列表---------------------------------
     @GetMapping("/articleList")
-    //ResponseResult是huanf-framework工程的domain目录的类
+    //ResponseResult是eden-framework工程的domain目录的类
     public ResponseResult articleList(Integer pageNum,Integer pageSize,Long categoryId){
         return articleService.articleList(pageNum,pageSize,categoryId);
     }
