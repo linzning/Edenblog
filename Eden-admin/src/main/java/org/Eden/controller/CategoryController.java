@@ -1,12 +1,14 @@
 package org.Eden.controller;
 
 import org.Eden.domain.ResponseResult;
+import org.Eden.domain.entity.Category;
 import org.Eden.domain.vo.CategoryVo;
+import org.Eden.domain.vo.PageVo;
+import org.Eden.dto.CategoryDto;
 import org.Eden.service.CategoryService;
+import org.Eden.utils.BeanCopyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +25,22 @@ public class CategoryController {
     public ResponseResult listAllCategory(){
         List<CategoryVo> list = categoryService.listAllCategory();
         return ResponseResult.okResult(list);
+    }
+
+    //----------------------------分页查询文章的分类列表---------------------------------
+
+    @GetMapping("/list")
+    public ResponseResult list(Category category, Integer pageNum, Integer pageSize) {
+        PageVo pageVo = categoryService.selectCategoryPage(category,pageNum,pageSize);
+        return ResponseResult.okResult(pageVo);
+    }
+
+    //-----------------------------增加文章的分类--------------------------------------
+
+    @PostMapping
+    public ResponseResult add(@RequestBody CategoryDto categoryDto){
+        Category category = BeanCopyUtils.copyBean(categoryDto, Category.class);
+        categoryService.save(category);
+        return ResponseResult.okResult();
     }
 }

@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="发布文章-查询标签接口">
-      <change afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/ArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/ArticleTag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/vo/ArticleVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/dto/AddArticleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/mapper/ArticleTagMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/mapper/ArticleVoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/ArticleTagService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/ArticleVoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/ArticleTagServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/ArticleVoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/dto/CategoryDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5f4b968e-e7fa-4549-8939-2cc522ba9c35.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5f4b968e-e7fa-4549-8939-2cc522ba9c35.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/utils/RedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/utils/RedisCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/LoginUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/CategoryServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +116,8 @@
       <workItem from="1702526159445" duration="121000" />
       <workItem from="1702631983187" duration="9000" />
       <workItem from="1702866955353" duration="7287000" />
+      <workItem from="1702881381466" duration="44000" />
+      <workItem from="1702881455540" duration="956000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
