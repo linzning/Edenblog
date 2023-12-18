@@ -7,7 +7,7 @@
     <!--根据id来删除标签-->
     <update id="myUpdateById" parameterType="list">
         UPDATE
-            `sg_tag` tag
+            `eden_tag` tag
         SET
             tag.`del_flag` = #{flag}
         WHERE
