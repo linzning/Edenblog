@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="删除菜单功能">
-      <change afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/Role.java" afterDir="false" />
+    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="查询角色">
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/RoleMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/vo/MenuTreeVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/dto/ChangeRoleStatusDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/mapper/RoleMenuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/RoleMenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/RoleMenuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/utils/SystemConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/RoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/RoleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/RoleServiceImpl.java" afterDir="false" />
     </list>
@@ -111,7 +119,7 @@
       <workItem from="1702631983187" duration="9000" />
       <workItem from="1702866955353" duration="7287000" />
       <workItem from="1702881381466" duration="44000" />
-      <workItem from="1702881455540" duration="4101000" />
+      <workItem from="1702881455540" duration="4712000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -321,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702885463475</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="查询角色">
+      <option name="closed" value="true" />
+      <created>1702885682897</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1702885682897</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +355,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="testREADME" />
     <MESSAGE value="显示评论功能" />
     <MESSAGE value="发布评论功能" />
     <MESSAGE value="发布友链评论功能" />
@@ -364,6 +379,7 @@
     <MESSAGE value="查询菜单" />
     <MESSAGE value="新增菜单" />
     <MESSAGE value="删除菜单功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除菜单功能" />
+    <MESSAGE value="查询角色" />
+    <option name="LAST_COMMIT_MESSAGE" value="查询角色" />
   </component>
 </project>

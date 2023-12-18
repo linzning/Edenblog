@@ -2,9 +2,11 @@ package org.Eden.controller;
 
 import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.Menu;
+import org.Eden.domain.vo.MenuTreeVo;
 import org.Eden.domain.vo.MenuVo;
 import org.Eden.service.MenuService;
 import org.Eden.utils.BeanCopyUtils;
+import org.Eden.utils.SystemConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,5 +64,16 @@ public class MenuController {
         }
         menuService.removeById(menuId);
         return ResponseResult.okResult();
+    }
+
+    //----------------------------新增角色-获取菜单下拉树列表-------------------------------
+
+
+    @GetMapping("/treeselect")
+    public ResponseResult treeselect() {
+        //复用之前的selectMenuList方法。方法需要参数，参数可以用来进行条件查询，而这个方法不需要条件，所以直接new Menu()传入
+        List<Menu> menus = menuService.selectMenuList(new Menu());
+        List<MenuTreeVo> options =  SystemConverter.buildMenuSelectTree(menus);
+        return ResponseResult.okResult(options);
     }
 }

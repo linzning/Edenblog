@@ -2,11 +2,10 @@ package org.Eden.controller;
 
 import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.Role;
+import org.Eden.dto.ChangeRoleStatusDto;
 import org.Eden.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/system/role")
@@ -19,5 +18,24 @@ public class RoleController {
     @GetMapping("/list")
     public ResponseResult list(Role role, Integer pageNum, Integer pageSize) {
         return roleService.selectRolePage(role,pageNum,pageSize);
+    }
+
+    //-----------------------------修改角色的状态--------------------------------------
+
+    @PutMapping("/changeStatus")
+    public ResponseResult changeStatus(@RequestBody ChangeRoleStatusDto roleStatusDto){
+        Role role = new Role();
+        role.setId(roleStatusDto.getRoleId());
+        role.setStatus(roleStatusDto.getStatus());
+        return ResponseResult.okResult(roleService.updateById(role));
+    }
+
+    //-------------------------------新增角色-----------------------------------------
+
+    @PostMapping
+    public ResponseResult add( @RequestBody Role role) {
+        roleService.insertRole(role);
+        return ResponseResult.okResult();
+
     }
 }
