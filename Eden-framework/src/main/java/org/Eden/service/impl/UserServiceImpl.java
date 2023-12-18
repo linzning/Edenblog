@@ -1,10 +1,13 @@
 package org.Eden.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.User;
+import org.Eden.domain.vo.PageVo;
 import org.Eden.domain.vo.UserInfoVo;
+import org.Eden.domain.vo.UserVo;
 import org.Eden.enums.AppHttpCodeEnum;
 import org.Eden.exception.SystemException;
 import org.Eden.mapper.UserMapper;
@@ -15,6 +18,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service("userService")
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
@@ -151,5 +157,31 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         boolean result = count(queryWrapper) > 0;
         //为true就说明已存在
         return result;
+    }
+
+    //--------------------------------查询用户列表-------------------------------------
+
+    @Override
+    public ResponseResult selectUserPage(User user, Integer pageNum, Integer pageSize) {
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper();
+
+        queryWrapper.like(StringUtils.hasText(user.getUserName()),User::getUserName,user.getUserName());
+        queryWrapper.eq(StringUtils.hasText(user.getStatus()),User::getStatus,user.getStatus());
+        queryWrapper.eq(StringUtils.hasText(user.getPhonenumber()),User::getPhonenumber,user.getPhonenumber());
+
+        Page<User> page = new Page<>();
+        page.setCurrent(pageNum);
+        page.setSize(pageSize);
+        page(page,queryWrapper);
+
+        //转换成VO
+        List<User> users = page.getRecords();
+        List<UserVo> userVoList = users.stream()
+                .map(u -> BeanCopyUtils.copyBean(u, UserVo.class))
+                .collect(Collectors.toList());
+        PageVo pageVo = new PageVo();
+        pageVo.setTotal(page.getTotal());
+        pageVo.setRows(userVoList);
+        return ResponseResult.okResult(pageVo);
     }
 }

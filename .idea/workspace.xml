@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="新增角色">
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/vo/RoleMenuTreeSelectVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/mapper/MenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/MenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/RoleMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/RoleMenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/RoleMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/RoleMenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="删除角色" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +106,7 @@
       <workItem from="1702631983187" duration="9000" />
       <workItem from="1702866955353" duration="7287000" />
       <workItem from="1702881381466" duration="44000" />
-      <workItem from="1702881455540" duration="5023000" />
+      <workItem from="1702881455540" duration="5336000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -342,7 +332,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702886214988</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="修改角色">
+      <option name="closed" value="true" />
+      <created>1702886610256</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1702886610256</updated>
+    </task>
+    <task id="LOCAL-00030" summary="删除角色">
+      <option name="closed" value="true" />
+      <created>1702886656041</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1702886656041</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,8 +366,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="发布评论功能" />
-    <MESSAGE value="发布友链评论功能" />
     <MESSAGE value="完成个人中心信息展示" />
     <MESSAGE value="注册功能" />
     <MESSAGE value="swagger文档配置" />
@@ -385,6 +389,8 @@
     <MESSAGE value="删除菜单功能" />
     <MESSAGE value="查询角色" />
     <MESSAGE value="新增角色" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增角色" />
+    <MESSAGE value="修改角色" />
+    <MESSAGE value="删除角色" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除角色" />
   </component>
 </project>
