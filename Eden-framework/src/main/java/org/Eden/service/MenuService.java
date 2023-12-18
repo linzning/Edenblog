@@ -12,4 +12,6 @@ public interface MenuService extends IService<Menu> {
     List<Menu> selectRouterMenuTreeByUserId(Long userId);
     //查询菜单列表
     List<Menu> selectMenuList(Menu menu);
+    //删除菜单-判断是否存在子菜单
+    boolean hasChild(Long menuId);
 }
