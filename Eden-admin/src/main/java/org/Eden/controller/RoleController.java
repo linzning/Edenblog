@@ -7,6 +7,8 @@ import org.Eden.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/system/role")
 public class RoleController {
@@ -60,5 +62,14 @@ public class RoleController {
     public ResponseResult remove(@PathVariable(name = "id") Long id) {
         roleService.removeById(id);
         return ResponseResult.okResult();
+    }
+
+    //--------------------------------新增用户---------------------------------------
+
+    @GetMapping("/listAllRole")
+    //①查询角色列表接口
+    public ResponseResult listAllRole(){
+        List<Role> roles = roleService.selectRoleAll();
+        return ResponseResult.okResult(roles);
     }
 }
