@@ -3,6 +3,9 @@ package org.Eden.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.Category;
+import org.Eden.domain.vo.CategoryVo;
+
+import java.util.List;
 
 
 /**
@@ -12,5 +15,10 @@ import org.Eden.domain.entity.Category;
  * @since 2023-11-13 21:47:22
  */
 public interface CategoryService extends IService<Category> {
+
+    //查询文章分类的接口
     ResponseResult getCategoryList();
+
+    //写博客-查询文章分类的接口
+    List<CategoryVo> listAllCategory();
 }
