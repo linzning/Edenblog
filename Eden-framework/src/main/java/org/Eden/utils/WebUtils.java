@@ -15,6 +15,7 @@ public class WebUtils {
      * @param string 待渲染的字符串
      * @return null
      */
+    //easyExcel文件导出失败时候做的操作
     public static void renderString(HttpServletResponse response, String string) {
         try
         {
@@ -29,14 +30,11 @@ public class WebUtils {
         }
     }
 
-
-    public static void setDownLoadHeader(String filename, ServletContext context, HttpServletResponse response) throws UnsupportedEncodingException {
-        String mimeType = context.getMimeType(filename);//获取文件的mime类型
-        response.setHeader("content-type",mimeType);
-        String fname= URLEncoder.encode(filename,"UTF-8");
+    //easyExcel文件导出
+    public static void setDownLoadHeader(String filename, HttpServletResponse response) throws UnsupportedEncodingException {
+        response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+        response.setCharacterEncoding("utf-8");
+        String fname= URLEncoder.encode(filename,"UTF-8").replaceAll("\\+", "%20");
         response.setHeader("Content-disposition","attachment; filename="+fname);
-
-//        response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
-//        response.setCharacterEncoding("utf-8");
     }
 }
