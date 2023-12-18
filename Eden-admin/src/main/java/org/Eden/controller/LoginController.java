@@ -2,8 +2,10 @@ package org.Eden.controller;
 
 import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.LoginUser;
+import org.Eden.domain.entity.Menu;
 import org.Eden.domain.entity.User;
 import org.Eden.domain.vo.AdminUserInfoVo;
+import org.Eden.domain.vo.RoutersVo;
 import org.Eden.domain.vo.UserInfoVo;
 import org.Eden.enums.AppHttpCodeEnum;
 import org.Eden.exception.SystemException;
@@ -42,9 +44,10 @@ public class LoginController {
         return systemLoginService.login(user);
     }
 
-    //-----------------------------查询(超级管理员|非超级管理员)的权限和角色信息------------------------------------------
+    //---------------------------查询(超级管理员|非超级管理员)的权限和角色信息-----------------------------
 
     @GetMapping("/getInfo")
+    //AdminUserInfoVo是我们在huanf-framework工程写的类
     public ResponseResult<AdminUserInfoVo> getInfo(){
         //获取当前登录的用户。SecurityUtils是我们在huanf-framework写的类
         LoginUser loginUser = SecurityUtils.getLoginUser();
@@ -61,5 +64,19 @@ public class LoginController {
         //封装响应返回
         AdminUserInfoVo adminUserInfoVo = new AdminUserInfoVo(perms,roleKeyList,userInfoVo);
         return ResponseResult.okResult(adminUserInfoVo);
+    }
+
+    //-------------------------------------查询路由信息(权限菜单)--------------------------------------
+
+    @GetMapping("/getRouters")
+    //RoutersVo是我们在huanf-framework工程写的类
+    public ResponseResult<RoutersVo> getRouters(){
+        //获取用户id
+        Long userId = SecurityUtils.getUserId();
+
+        //根据用户id来查询menu(权限菜单)。要求查询结果是tree的形式，也就是子父菜单树
+        List<Menu> menus = menuService.selectRouterMenuTreeByUserId(userId);
+        //封装响应返回
+        return ResponseResult.okResult(new RoutersVo(menus));
     }
 }

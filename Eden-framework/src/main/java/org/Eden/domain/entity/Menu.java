@@ -1,18 +1,23 @@
 package org.Eden.domain.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 import java.util.Date;
+import java.util.List;
+
 
 @SuppressWarnings("serial")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName("sys_menu")
+@Accessors(chain = true) //允许链式编程
 public class Menu  {
     //菜单ID
     @TableId
@@ -52,4 +57,8 @@ public class Menu  {
     private String remark;
 
     private String delFlag;
+
+    //由于数据库没有children字段，所以我们要添加@TableField(exist = false)注解让mybatis在查表时不查询这个字段
+    @TableField(exist = false)
+    private List<Menu> children;
 }
