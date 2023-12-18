@@ -3,6 +3,7 @@ package org.Eden.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.Article;
+import org.Eden.domain.vo.PageVo;
 import org.Eden.dto.AddArticleDto;
 
 public interface ArticleService extends IService<Article> {
@@ -21,4 +22,7 @@ public interface ArticleService extends IService<Article> {
 
     //新增博客文章
     ResponseResult add(AddArticleDto article);
+
+    //管理后台(文章管理)-分页查询文章
+    PageVo selectArticlePage(Article article, Integer pageNum, Integer pageSize);
 }

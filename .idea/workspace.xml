@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="修改分类">
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/vo/ExcelCategoryVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/PermissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/constants/SystemConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/constants/SystemConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/LoginUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/handler/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/handler/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/utils/WebUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/utils/WebUtils.java" afterDir="false" />
+    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="权限管理">
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/ArticleServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +109,7 @@
       <workItem from="1702631983187" duration="9000" />
       <workItem from="1702866955353" duration="7287000" />
       <workItem from="1702881381466" duration="44000" />
-      <workItem from="1702881455540" duration="2443000" />
+      <workItem from="1702881455540" duration="2763000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -280,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702883283853</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="权限管理">
+      <option name="closed" value="true" />
+      <created>1702884100787</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1702884100787</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +317,7 @@
     <MESSAGE value="新增分类" />
     <MESSAGE value="删除分类" />
     <MESSAGE value="修改分类" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改分类" />
+    <MESSAGE value="权限管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限管理" />
   </component>
 </project>

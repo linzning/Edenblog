@@ -23,6 +23,7 @@ import org.springframework.stereotype.Service;
 import java.util.function.Function;
 import org.Eden.constants.SystemConstants;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -177,5 +178,28 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         //添加 博客和标签的关联
         articleTagService.saveBatch(articleTags);
         return ResponseResult.okResult();
+    }
+
+    //---------------------------管理后台(文章管理)-分页查询文章----------------------------
+
+    @Override
+    public PageVo selectArticlePage(Article article, Integer pageNum, Integer pageSize) {
+        LambdaQueryWrapper<Article> queryWrapper = new LambdaQueryWrapper();
+
+        queryWrapper.like(StringUtils.hasText(article.getTitle()),Article::getTitle, article.getTitle());
+        queryWrapper.like(StringUtils.hasText(article.getSummary()),Article::getSummary, article.getSummary());
+
+        Page<Article> page = new Page<>();
+        page.setCurrent(pageNum);
+        page.setSize(pageSize);
+        page(page,queryWrapper);
+
+        //转换成VO
+        List<Article> articles = page.getRecords();
+
+        PageVo pageVo = new PageVo();
+        pageVo.setTotal(page.getTotal());
+        pageVo.setRows(articles);
+        return pageVo;
     }
 }
