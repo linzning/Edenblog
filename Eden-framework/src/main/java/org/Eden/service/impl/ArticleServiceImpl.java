@@ -9,6 +9,7 @@ import org.Eden.domain.entity.ArticleTag;
 import org.Eden.domain.entity.Category;
 import org.Eden.domain.vo.*;
 import org.Eden.dto.AddArticleDto;
+import org.Eden.dto.ArticleDto;
 import org.Eden.mapper.ArticleMapper;
 import org.Eden.service.ArticleService;
 import org.Eden.service.ArticleTagService;
@@ -201,5 +202,39 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         pageVo.setTotal(page.getTotal());
         pageVo.setRows(articles);
         return pageVo;
+    }
+
+    //----------------------------修改文章-①根据文章id查询对应的文章--------------------------------
+
+    @Override
+    //①先查询根据文章id查询对应的文章
+    public ArticleByIdVo getInfo(Long id) {
+        Article article = getById(id);
+        //获取关联标签
+        LambdaQueryWrapper<ArticleTag> articleTagLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        articleTagLambdaQueryWrapper.eq(ArticleTag::getArticleId,article.getId());
+        List<ArticleTag> articleTags = articleTagService.list(articleTagLambdaQueryWrapper);
+        List<Long> tags = articleTags.stream().map(articleTag -> articleTag.getTagId()).collect(Collectors.toList());
+
+        ArticleByIdVo articleVo = BeanCopyUtils.copyBean(article,ArticleByIdVo.class);
+        articleVo.setTags(tags);
+        return articleVo;
+    }
+
+    @Override
+    //②然后才是修改文章
+    public void edit(ArticleDto articleDto) {
+        Article article = BeanCopyUtils.copyBean(articleDto, Article.class);
+        //更新博客信息
+        updateById(article);
+        //删除原有的 标签和博客的关联
+        LambdaQueryWrapper<ArticleTag> articleTagLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        articleTagLambdaQueryWrapper.eq(ArticleTag::getArticleId,article.getId());
+        articleTagService.remove(articleTagLambdaQueryWrapper);
+        //添加新的博客和标签的关联信息
+        List<ArticleTag> articleTags = articleDto.getTags().stream()
+                .map(tagId -> new ArticleTag(articleDto.getId(), tagId))
+                .collect(Collectors.toList());
+        articleTagService.saveBatch(articleTags);
     }
 }

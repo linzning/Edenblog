@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="权限管理">
+    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="后台查询文章">
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/vo/ArticleByIdVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/dto/ArticleDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/ArticleServiceImpl.java" afterDir="false" />
     </list>
@@ -109,7 +112,7 @@
       <workItem from="1702631983187" duration="9000" />
       <workItem from="1702866955353" duration="7287000" />
       <workItem from="1702881381466" duration="44000" />
-      <workItem from="1702881455540" duration="2763000" />
+      <workItem from="1702881455540" duration="3078000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -279,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702884100787</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="后台查询文章">
+      <option name="closed" value="true" />
+      <created>1702884386017</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1702884386017</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +329,7 @@
     <MESSAGE value="删除分类" />
     <MESSAGE value="修改分类" />
     <MESSAGE value="权限管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="权限管理" />
+    <MESSAGE value="后台查询文章" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台查询文章" />
   </component>
 </project>

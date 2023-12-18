@@ -3,8 +3,10 @@ package org.Eden.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.Article;
+import org.Eden.domain.vo.ArticleByIdVo;
 import org.Eden.domain.vo.PageVo;
 import org.Eden.dto.AddArticleDto;
+import org.Eden.dto.ArticleDto;
 
 public interface ArticleService extends IService<Article> {
 
@@ -25,4 +27,10 @@ public interface ArticleService extends IService<Article> {
 
     //管理后台(文章管理)-分页查询文章
     PageVo selectArticlePage(Article article, Integer pageNum, Integer pageSize);
+
+    //修改文章-①根据文章id查询对应的文章
+    ArticleByIdVo getInfo(Long id);
+
+    //修改文章-②然后才是修改文章
+    void edit(ArticleDto article);
 }
