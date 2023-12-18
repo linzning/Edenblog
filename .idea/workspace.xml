@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="后台查询文章">
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/vo/ArticleByIdVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/dto/ArticleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/ArticleServiceImpl.java" afterDir="false" />
+    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="修改、删除文章">
+      <change afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/MenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/vo/MenuVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/MenuServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +111,7 @@
       <workItem from="1702631983187" duration="9000" />
       <workItem from="1702866955353" duration="7287000" />
       <workItem from="1702881381466" duration="44000" />
-      <workItem from="1702881455540" duration="3078000" />
+      <workItem from="1702881455540" duration="3378000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -290,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702884386017</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="修改、删除文章">
+      <option name="closed" value="true" />
+      <created>1702884698772</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1702884698772</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +337,7 @@
     <MESSAGE value="修改分类" />
     <MESSAGE value="权限管理" />
     <MESSAGE value="后台查询文章" />
-    <option name="LAST_COMMIT_MESSAGE" value="后台查询文章" />
+    <MESSAGE value="修改、删除文章" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改、删除文章" />
   </component>
 </project>
