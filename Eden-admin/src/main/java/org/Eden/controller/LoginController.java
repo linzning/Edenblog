@@ -13,6 +13,7 @@ import org.Eden.service.MenuService;
 import org.Eden.service.RoleService;
 import org.Eden.service.SystemLoginService;
 import org.Eden.utils.BeanCopyUtils;
+import org.Eden.utils.RedisCache;
 import org.Eden.utils.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -78,5 +79,31 @@ public class LoginController {
         List<Menu> menus = menuService.selectRouterMenuTreeByUserId(userId);
         //封装响应返回
         return ResponseResult.okResult(new RoutersVo(menus));
+    }
+
+    //--------------------------退出登录的接口(不建议直接写在controller)--------------------------------
+
+    //@Autowired
+    //private RedisCache redisCache;
+    //
+    //@PostMapping("/user/logout")
+    //public ResponseResult logout(){
+    //    //获取当前登录的用户id
+    //    Long userId = SecurityUtils.getUserId();
+    //
+    //    //删除redis中对应的值
+    //    redisCache.deleteObject("login:"+userId);
+    //    return ResponseResult.okResult();
+    //}
+
+    //-----------------------------退出登录的接口(我们写在service比较好---------------------------------
+
+    @Autowired
+    private RedisCache redisCache;
+
+    @PostMapping("/user/logout")
+    public ResponseResult logout(){
+        //退出登录
+        return systemLoginService.logout();
     }
 }
