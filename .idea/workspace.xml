@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="动态路由">
-      <change beforePath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/SystemLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/SystemLoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/SystemLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/SystemLoginServiceImpl.java" afterDir="false" />
+    <list default="true" id="2ccd9a1a-ba1d-45aa-983b-b442a08a0ce7" name="Changes" comment="退出登录功能">
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/dto/AddTagDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/dto/EditTagDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/dto/TagListDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-admin/src/main/java/org/Eden/controller/TagController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/domain/entity/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/mapper/TagMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/mapper/TagMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/TagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/TagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eden-framework/src/main/java/org/Eden/service/impl/TagServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +114,7 @@
       <workItem from="1702433476246" duration="8203000" />
       <workItem from="1702526159445" duration="121000" />
       <workItem from="1702631983187" duration="9000" />
-      <workItem from="1702866955353" duration="3837000" />
+      <workItem from="1702866955353" duration="5080000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -206,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702874774788</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="退出登录功能">
+      <option name="closed" value="true" />
+      <created>1702875139764</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702875139764</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +250,7 @@
     <MESSAGE value="后台登录功能" />
     <MESSAGE value="用户权限控制" />
     <MESSAGE value="动态路由" />
-    <option name="LAST_COMMIT_MESSAGE" value="动态路由" />
+    <MESSAGE value="退出登录功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="退出登录功能" />
   </component>
 </project>
