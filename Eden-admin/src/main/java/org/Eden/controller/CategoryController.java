@@ -43,4 +43,10 @@ public class CategoryController {
         categoryService.save(category);
         return ResponseResult.okResult();
     }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseResult remove(@PathVariable(value = "id")Long id){
+        categoryService.removeById(id);
+        return ResponseResult.okResult();
+    }
 }
