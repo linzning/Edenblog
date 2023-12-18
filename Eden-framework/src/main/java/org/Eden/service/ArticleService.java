@@ -3,10 +3,11 @@ package org.Eden.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.Article;
+import org.Eden.dto.AddArticleDto;
 
 public interface ArticleService extends IService<Article> {
 
-    //热门文章列表
+    //文章列表
     ResponseResult hotArticleList();
 
     //分类查询文章列表
@@ -14,4 +15,10 @@ public interface ArticleService extends IService<Article> {
 
     //根据id查询文章详情
     ResponseResult getArticleDetail(Long id);
+
+    //根据文章id从mysql查询文章
+    ResponseResult updateViewCount(Long id);
+
+    //新增博客文章
+    ResponseResult add(AddArticleDto article);
 }

@@ -5,20 +5,24 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.Article;
+import org.Eden.domain.entity.ArticleTag;
 import org.Eden.domain.entity.Category;
-import org.Eden.domain.vo.ArticleDetailVo;
-import org.Eden.domain.vo.ArticleListVo;
-import org.Eden.domain.vo.PageVo;
+import org.Eden.domain.vo.*;
+import org.Eden.dto.AddArticleDto;
 import org.Eden.mapper.ArticleMapper;
 import org.Eden.service.ArticleService;
+import org.Eden.service.ArticleTagService;
+import org.Eden.service.ArticleVoService;
 import org.Eden.service.CategoryService;
 import org.Eden.utils.BeanCopyUtils;
+import org.Eden.utils.RedisCache;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.Eden.domain.vo.HotArticleVo;
+
 import java.util.function.Function;
 import org.Eden.constants.SystemConstants;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -135,5 +139,43 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
         //封装响应返回。ResponseResult是我们在huanf-framework工程的domain目录写的实体类
         return ResponseResult.okResult(articleDetailVo);
+    }
+
+    //--------------------------------根据文章id从mysql查询文章----------------------------
+
+    @Autowired
+    private RedisCache redisCache;
+
+    @Override
+    public ResponseResult updateViewCount(Long id) {
+        //更新redis中的浏览量，对应文章id的viewCount浏览量。article:viewCount是ViewCountRunner类里面写的
+        //用户每从mysql根据文章id查询一次浏览量，那么redis的浏览量就增加1
+        redisCache.incrementCacheMapValue("article:viewCount",id.toString(),1);
+        return ResponseResult.okResult();
+    }
+
+    //-------------------------------------增加博客文章-----------------------------------
+
+    @Autowired
+    private ArticleTagService articleTagService;
+
+    @Autowired
+    private ArticleVoService articleVoService;
+
+    @Override
+    @Transactional
+    public ResponseResult add(AddArticleDto articleDto) {
+        //添加 博客
+        ArticleVo articlevo = BeanCopyUtils.copyBean(articleDto, ArticleVo.class);
+        articleVoService.save(articlevo);
+
+
+        List<ArticleTag> articleTags = articleDto.getTags().stream()
+                .map(tagId -> new ArticleTag(articlevo.getId(), tagId))
+                .collect(Collectors.toList());
+
+        //添加 博客和标签的关联
+        articleTagService.saveBatch(articleTags);
+        return ResponseResult.okResult();
     }
 }

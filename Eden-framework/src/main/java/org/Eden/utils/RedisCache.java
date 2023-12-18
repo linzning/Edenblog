@@ -11,7 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 @SuppressWarnings(value = { "unchecked", "rawtypes" })
 @Component
-public class RedisCache {
+public class RedisCache
+{
     @Autowired
     public RedisTemplate redisTemplate;
 
@@ -197,6 +198,11 @@ public class RedisCache {
     {
         HashOperations<String, String, T> opsForHash = redisTemplate.opsForHash();
         return opsForHash.get(key, hKey);
+    }
+
+
+    public void incrementCacheMapValue(String key,String hKey,int v){
+        redisTemplate.opsForHash().increment(key,hKey,v);
     }
 
     /**
