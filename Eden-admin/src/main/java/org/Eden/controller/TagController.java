@@ -3,6 +3,7 @@ package org.Eden.controller;
 import org.Eden.domain.ResponseResult;
 import org.Eden.domain.entity.Tag;
 import org.Eden.domain.vo.PageVo;
+import org.Eden.domain.vo.TagVo;
 import org.Eden.dto.AddTagDto;
 import org.Eden.dto.EditTagDto;
 import org.Eden.dto.TagListDto;
@@ -10,6 +11,8 @@ import org.Eden.service.TagService;
 import org.Eden.utils.BeanCopyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/content/tag")
@@ -36,28 +39,35 @@ public class TagController {
         return ResponseResult.okResult();
     }
 
-    ////-------------------------------删除标签------------------------------------
+    //-------------------------------删除标签------------------------------------
 
     @DeleteMapping("/{id}")
-    public ResponseResult delete(@PathVariable Long id){
-        tagService.removeById(id);
-        return ResponseResult.okResult();
+    //pageTagList是我们在huanf-framework工程写的方法
+    public ResponseResult deleteTag(@PathVariable Long id){
+        return tagService.deleteTag(id);
     }
 
-    ////-------------------------------修改标签------------------------------------
+    //-------------------------------修改标签------------------------------------
+
 
     @GetMapping("/{id}")
     //①根据标签的id来查询标签
-    public ResponseResult getInfo(@PathVariable(value = "id")Long id){
-        Tag tag = tagService.getById(id);
-        return ResponseResult.okResult(tag);
+    public ResponseResult getLableById(@PathVariable Long id){
+        return tagService.getLableById(id);
     }
 
     @PutMapping
     //②根据标签的id来修改标签
-    public ResponseResult edit(@RequestBody EditTagDto tagDto){
-        Tag tag = BeanCopyUtils.copyBean(tagDto,Tag.class);
-        tagService.updateById(tag);
-        return ResponseResult.okResult();
+    public ResponseResult updateById(@RequestBody TagVo tagVo){
+        return tagService.myUpdateById(tagVo);
+    }
+
+
+    //---------------------------写博文-查询文章标签的接口---------------------------
+
+    @GetMapping("/listAllTag")
+    public ResponseResult listAllTag(){
+        List<TagVo> list = tagService.listAllTag();
+        return ResponseResult.okResult(list);
     }
 }
